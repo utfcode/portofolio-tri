@@ -58,10 +58,6 @@
             background: #cbd5e1; 
             border-radius: 4px;
         }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #94a3b8; 
-        }
-
         /* Hover effect for portfolio images & Crop border trick */
         .portfolio-img-wrapper {
             overflow: hidden;
@@ -72,10 +68,10 @@
             transition: transform 0.5s ease;
             /* Trik CSS: Zoom 3% secara default untuk memotong garis tepi (border) bawaan PDF/Gambar */
             transform: scale(1.03); 
+            cursor: pointer; /* Menambahkan cursor tangan agar user tahu ini bisa diklik */
         }
         .portfolio-img-wrapper:hover img {
-            /* Zoom lebih besar saat diarahkan mouse */
-            transform: scale(1.08);
+            transform: scale(1.05);
         }
     </style>
 </head>
@@ -120,7 +116,7 @@
             </div>
         </div>
     </nav>
-    
+
     <!-- Bagian Beranda (Hero) -->
     <section id="home" class="pt-32 pb-20 md:pt-48 md:pb-32 px-4 max-w-7xl mx-auto flex flex-col items-center text-center">
         <div class="inline-block px-4 py-1 mb-6 rounded-full bg-blue-50 text-primary font-medium text-sm md:text-base border border-blue-100 fade-in-up">
@@ -381,6 +377,7 @@
             <div class="mt-20">
                 <div class="flex flex-col lg:flex-row gap-8 lg:gap-12 items-start">
                     <!-- Deskripsi Project -->
+                    <!-- PERBAIKAN: Hanya sticky di layar besar (lg:sticky), sehingga tidak menumpuk di HP -->
                     <div class="w-full lg:w-1/3 lg:sticky lg:top-24">
                         <h3 class="text-2xl font-bold text-dark mb-4">Marketing Campaign Designs</h3>
                         <p class="text-slate-600 mb-6 leading-relaxed">
@@ -400,26 +397,29 @@
                     
                     <!-- Grid Gambar Marketing -->
                     <div class="w-full lg:w-2/3 grid grid-cols-1 sm:grid-cols-2 gap-6">
-                        <div class="portfolio-img-wrapper shadow-sm bg-slate-50">
-                            <img src="Image/Pearson%20Learner%20Awards.jpg" alt="Pearson Learner Awards" class="w-full h-auto object-cover aspect-square">
+                        <!-- Note: Replace src with your actual image links -->
+                        <div class="portfolio-img-wrapper border border-slate-200 shadow-sm bg-slate-50">
+                            <img src="https://placehold.co/600x600/f8fafc/475569?text=Pearson+Learner+Awards" alt="Pearson Learner Awards" class="w-full h-auto object-cover aspect-square">
                         </div>
-                        <div class="portfolio-img-wrapper shadow-sm bg-slate-50">
-                            <img src="Image/Eid%20Al-Adha%20Social%20Post.jpg" alt="Eid Al-Adha Social Post" class="w-full h-auto object-cover aspect-square">
+                        <div class="portfolio-img-wrapper border border-slate-200 shadow-sm bg-slate-50">
+                            <img src="https://placehold.co/600x600/f8fafc/475569?text=Eid+Al-Adha+Post" alt="Eid Al-Adha Social Post" class="w-full h-auto object-cover aspect-square">
                         </div>
-                        <div class="portfolio-img-wrapper shadow-sm bg-slate-50 sm:col-span-2">
-                            <img src="Image/Implementation%20Training%20Banner.jpg" alt="Implementation Training Banner" class="w-full h-auto object-cover aspect-video">
+                        <div class="portfolio-img-wrapper border border-slate-200 shadow-sm bg-slate-50 sm:col-span-2">
+                            <img src="https://placehold.co/1200x600/f8fafc/475569?text=Implementation+Training+Banner" alt="Implementation Training Banner" class="w-full h-auto object-cover aspect-video">
                         </div>
-                        <div class="portfolio-img-wrapper shadow-sm bg-slate-50 sm:col-span-2">
-                            <img src="Image/Event%20Backdrop%20Design.jpg" alt="Event Backdrop Designs" class="w-full h-auto object-cover aspect-[3/1]">
+                        <div class="portfolio-img-wrapper border border-slate-200 shadow-sm bg-slate-50 sm:col-span-2">
+                            <img src="https://placehold.co/1200x400/f8fafc/475569?text=Event+Backdrop+Design" alt="Event Backdrop Designs" class="w-full h-auto object-cover aspect-[3/1]">
                         </div>
                     </div>
                 </div>
             </div>
 
             <!-- Case Study 2: Digital Summit -->
+            <!-- PERBAIKAN: Margin top dan padding disesuaikan untuk layar HP -->
             <div class="mt-20 lg:mt-32 pt-12 lg:pt-20 border-t border-slate-100">
                 <div class="flex flex-col lg:flex-row-reverse gap-8 lg:gap-12 items-start">
                     <!-- Deskripsi Project -->
+                    <!-- PERBAIKAN: lg:sticky ditambahkan -->
                     <div class="w-full lg:w-1/3 lg:sticky lg:top-24">
                         <span class="text-sm font-bold tracking-wider text-primary uppercase mb-2 block">My Best Work</span>
                         <h3 class="text-2xl font-bold text-dark mb-4">Pearson Indonesia Digital Summit</h3>
@@ -436,14 +436,14 @@
                     
                     <!-- Grid Gambar Summit -->
                     <div class="w-full lg:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div class="portfolio-img-wrapper shadow-sm bg-slate-50">
-                            <img src="Image/pids%20cover.jpg" alt="Digital Summit Invitation" class="w-full h-auto object-cover aspect-square">
+                        <div class="portfolio-img-wrapper border border-slate-200 shadow-sm bg-slate-50">
+                            <img src="https://placehold.co/1200x800/e0f2fe/0ea5e9?text=Digital+Summit+Full+Invitation" alt="Digital Summit Invitation" class="w-full h-auto object-cover aspect-square">
                         </div>
-                        <div class="portfolio-img-wrapper shadow-sm bg-slate-50">
-                            <img src="Image/pids%20teaser%20image.jpg" alt="Teaser Image" class="w-full h-auto object-cover aspect-square">
+                        <div class="portfolio-img-wrapper border border-slate-200 shadow-sm bg-slate-50">
+                            <img src="https://placehold.co/600x600/e0f2fe/0ea5e9?text=Teaser+Image" alt="Teaser Image" class="w-full h-auto object-cover aspect-square">
                         </div>
-                        <div class="portfolio-img-wrapper shadow-sm bg-slate-50 md:col-span-2">
-                            <img src="Image/pids%20zoom%20banner.jpg" alt="Zoom Background Banner" class="w-full h-auto object-cover">
+                        <div class="portfolio-img-wrapper border border-slate-200 shadow-sm bg-slate-50 md:col-span-2">
+                            <img src="https://placehold.co/600x600/e0f2fe/0ea5e9?text=Zoom+Banner" alt="Zoom Background Banner" class="w-full h-auto object-cover">
                         </div>
                     </div>
                 </div>
@@ -456,8 +456,8 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     <!-- Brochure -->
                     <div class="group">
-                        <div class="portfolio-img-wrapper shadow-sm bg-slate-50 mb-4 h-64">
-                            <img src="Image/Brochure%20Design.jpg" alt="Brochure Design" class="w-full h-full object-cover">
+                        <div class="portfolio-img-wrapper border border-slate-200 shadow-sm bg-slate-50 mb-4 h-64">
+                            <img src="https://placehold.co/800x600/f8fafc/475569?text=Editorial+Brochure+Design" alt="Brochure Design" class="w-full h-full object-cover">
                         </div>
                         <h4 class="font-bold text-dark">Brochure & Print Layouts</h4>
                         <p class="text-sm text-slate-500 mt-1">Structured layout design for Early Years Curriculum.</p>
@@ -465,8 +465,8 @@
 
                     <!-- Greeting Cards -->
                     <div class="group">
-                        <div class="portfolio-img-wrapper shadow-sm bg-slate-50 mb-4 h-64">
-                            <img src="Image/Greeting%20Cards.jpg" alt="Greeting Cards" class="w-full h-full object-cover">
+                        <div class="portfolio-img-wrapper border border-slate-200 shadow-sm bg-slate-50 mb-4 h-64">
+                            <img src="https://placehold.co/800x600/f8fafc/475569?text=Greeting+Cards+Collection" alt="Greeting Cards" class="w-full h-full object-cover">
                         </div>
                         <h4 class="font-bold text-dark">Social Media Greeting Cards</h4>
                         <p class="text-sm text-slate-500 mt-1">Thematic designs for National Education Day, Eid, and more.</p>
@@ -474,8 +474,8 @@
 
                     <!-- Web Banners -->
                     <div class="group">
-                        <div class="portfolio-img-wrapper shadow-sm bg-slate-50 mb-4 h-64">
-                            <img src="Image/Website%20Banner.jpg" alt="Website Banners" class="w-full h-full object-cover">
+                        <div class="portfolio-img-wrapper border border-slate-200 shadow-sm bg-slate-50 mb-4 h-64">
+                            <img src="https://placehold.co/800x600/f8fafc/475569?text=Website+Promo+Banners" alt="Website Banners" class="w-full h-full object-cover">
                         </div>
                         <h4 class="font-bold text-dark">E-commerce Web Banners</h4>
                         <p class="text-sm text-slate-500 mt-1">Promotional banners for IT books and personal development series.</p>
@@ -659,14 +659,17 @@
                 <a href="mailto:thartono.biz@gmail.com" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-300 hover:bg-primary hover:text-white transition-all">
                     <i class="fas fa-envelope"></i>
                 </a>
-                <!--
-                <a href="https://bit.ly/TriDesignPortofolio" target="_blank" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-300 hover:bg-primary hover:text-white transition-all" title="Portfolio">
-                    <i class="fas fa-palette"></i>
-                </a>
-                -->
             </div>
         </div>
     </footer>
+
+    <!-- Modal/Popup Preview Gambar -->
+    <div id="image-modal" class="hidden fixed inset-0 z-[100] bg-slate-900/95 backdrop-blur-sm flex justify-center items-center p-4 transition-opacity duration-300 opacity-0">
+        <button id="close-modal" class="absolute top-4 right-4 md:top-8 md:right-8 text-white/70 hover:text-white text-4xl focus:outline-none transition-colors" title="Close Preview">
+            <i class="fas fa-times"></i>
+        </button>
+        <img id="modal-image" src="" alt="Popup Image" class="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl transform scale-95 transition-transform duration-300">
+    </div>
 
     <!-- Script Interaktif -->
     <script>
@@ -707,6 +710,56 @@
             } else {
                 navbar.classList.remove('shadow-md');
                 navbar.classList.add('shadow-sm');
+            }
+        });
+
+        // ----------------------------------------------------
+        // Logic untuk Modal Preview Gambar (Popup Image)
+        // ----------------------------------------------------
+        const imageModal = document.getElementById('image-modal');
+        const modalImage = document.getElementById('modal-image');
+        const closeModalBtn = document.getElementById('close-modal');
+        const portfolioImages = document.querySelectorAll('.portfolio-img-wrapper img');
+
+        // Buka Modal saat gambar di-klik
+        portfolioImages.forEach(img => {
+            img.addEventListener('click', () => {
+                modalImage.src = img.src;
+                modalImage.alt = img.alt;
+                imageModal.classList.remove('hidden');
+                // Delay kecil untuk memicu animasi CSS transisi secara halus
+                setTimeout(() => {
+                    imageModal.classList.remove('opacity-0');
+                    modalImage.classList.remove('scale-95');
+                    modalImage.classList.add('scale-100');
+                }, 10);
+            });
+        });
+
+        // Fungsi Tutup Modal
+        const closeModal = () => {
+            imageModal.classList.add('opacity-0');
+            modalImage.classList.remove('scale-100');
+            modalImage.classList.add('scale-95');
+            setTimeout(() => {
+                imageModal.classList.add('hidden');
+            }, 300); // Menunggu animasi selesai sebelum menyembunyikan div-nya
+        };
+
+        // Event tutup saat klik tombol X
+        closeModalBtn.addEventListener('click', closeModal);
+        
+        // Event tutup saat area layar luar gambar di-klik
+        imageModal.addEventListener('click', (e) => {
+            if (e.target === imageModal) {
+                closeModal();
+            }
+        });
+
+        // Event tutup saat tekan tombol Escape (Esc) di keyboard
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !imageModal.classList.contains('hidden')) {
+                closeModal();
             }
         });
     </script>
