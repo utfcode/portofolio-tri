@@ -62,16 +62,20 @@
             background: #94a3b8; 
         }
 
-        /* Hover effect for portfolio images */
+        /* Hover effect for portfolio images & Crop border trick */
         .portfolio-img-wrapper {
             overflow: hidden;
             border-radius: 0.5rem;
+            background-color: #ffffff;
         }
         .portfolio-img-wrapper img {
             transition: transform 0.5s ease;
+            /* Trik CSS: Zoom 3% secara default untuk memotong garis tepi (border) bawaan PDF/Gambar */
+            transform: scale(1.03); 
         }
         .portfolio-img-wrapper:hover img {
-            transform: scale(1.05);
+            /* Zoom lebih besar saat diarahkan mouse */
+            transform: scale(1.08);
         }
     </style>
 </head>
@@ -116,7 +120,7 @@
             </div>
         </div>
     </nav>
-
+    
     <!-- Bagian Beranda (Hero) -->
     <section id="home" class="pt-32 pb-20 md:pt-48 md:pb-32 px-4 max-w-7xl mx-auto flex flex-col items-center text-center">
         <div class="inline-block px-4 py-1 mb-6 rounded-full bg-blue-50 text-primary font-medium text-sm md:text-base border border-blue-100 fade-in-up">
@@ -377,7 +381,6 @@
             <div class="mt-20">
                 <div class="flex flex-col lg:flex-row gap-8 lg:gap-12 items-start">
                     <!-- Deskripsi Project -->
-                    <!-- PERBAIKAN: Hanya sticky di layar besar (lg:sticky), sehingga tidak menumpuk di HP -->
                     <div class="w-full lg:w-1/3 lg:sticky lg:top-24">
                         <h3 class="text-2xl font-bold text-dark mb-4">Marketing Campaign Designs</h3>
                         <p class="text-slate-600 mb-6 leading-relaxed">
@@ -397,7 +400,6 @@
                     
                     <!-- Grid Gambar Marketing -->
                     <div class="w-full lg:w-2/3 grid grid-cols-1 sm:grid-cols-2 gap-6">
-                        <!-- Note: Replace src with your actual image links -->
                         <div class="portfolio-img-wrapper shadow-sm bg-slate-50">
                             <img src="Image/Pearson%20Learner%20Awards.jpg" alt="Pearson Learner Awards" class="w-full h-auto object-cover aspect-square">
                         </div>
@@ -415,11 +417,9 @@
             </div>
 
             <!-- Case Study 2: Digital Summit -->
-            <!-- PERBAIKAN: Margin top dan padding disesuaikan untuk layar HP -->
             <div class="mt-20 lg:mt-32 pt-12 lg:pt-20 border-t border-slate-100">
                 <div class="flex flex-col lg:flex-row-reverse gap-8 lg:gap-12 items-start">
                     <!-- Deskripsi Project -->
-                    <!-- PERBAIKAN: lg:sticky ditambahkan -->
                     <div class="w-full lg:w-1/3 lg:sticky lg:top-24">
                         <span class="text-sm font-bold tracking-wider text-primary uppercase mb-2 block">My Best Work</span>
                         <h3 class="text-2xl font-bold text-dark mb-4">Pearson Indonesia Digital Summit</h3>
@@ -436,14 +436,14 @@
                     
                     <!-- Grid Gambar Summit -->
                     <div class="w-full lg:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="portfolio-img-wrapper shadow-sm bg-slate-50 md:col-span-2">
+                            <img src="Image/pids%20cover.jpg" alt="Digital Summit Invitation" class="w-full h-auto object-cover">
+                        </div>
                         <div class="portfolio-img-wrapper shadow-sm bg-slate-50">
                             <img src="Image/pids%20teaser%20image.jpg" alt="Teaser Image" class="w-full h-auto object-cover aspect-square">
                         </div>
                         <div class="portfolio-img-wrapper shadow-sm bg-slate-50">
-                            <img src="Image/pids%20cover.jpg" alt="Digital Summit Invitation" class="w-full h-auto object-cover aspect-square">
-                        </div>
-                         <div class="portfolio-img-wrapper shadow-sm bg-slate-50 md:col-span-2">
-                            <img src="Image/pids%20zoom%20banner.jpg" alt="Zoom Background Banner" class="w-full h-auto object-cover">
+                            <img src="Image/pids%20zoom%20banner.jpg" alt="Zoom Background Banner" class="w-full h-auto object-cover aspect-square">
                         </div>
                     </div>
                 </div>
